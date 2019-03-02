@@ -77,7 +77,7 @@ class UpdateKey extends Command
         // check if we can write to the .env file
         $envPath = base_path() . '/.env';
         $envWriteable = file_exists($envPath) && @fopen($envPath, 'a');
-
+        
         if ($key = $this->option('key')) {
             $key = base64_decode(str_replace('base64:', '', $key));
         } elseif ($envWriteable) {

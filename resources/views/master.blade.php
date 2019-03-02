@@ -14,11 +14,11 @@
 
     @if (Utils::isWhiteLabel() && ! auth()->check())
         <title>{{ trans('texts.client_portal') }}</title>
-        <link href="{{ asset('ic_cloud_circle.png') }}" rel="shortcut icon" type="image/png">
+        <link href="{{ asset('p7s.png') }}" rel="shortcut icon" type="image/png">
     @else
-        <title>{{ isset($title) ? ($title . ' | Invoice Ninja') : ('Invoice Ninja | ' . trans('texts.app_title')) }}</title>
+        <title>{{ isset($title) ? ($title . ' | Prime 7 Solutions') : ('Prime 7 Solutions | ' . trans('texts.app_title')) }}</title>
         <meta name="description" content="{{ isset($description) ? $description : trans('texts.app_description') }}"/>
-        <link href="{{ asset('favicon-v2.png') }}" rel="shortcut icon" type="image/png">
+        <link href="{{ asset('p7s.png') }}" rel="shortcut icon" type="image/png">
 
         <meta property="og:site_name" content="Invoice Ninja"/>
         <meta property="og:url" content="{{ SITE_URL }}"/>
@@ -28,8 +28,8 @@
 
         <!-- http://realfavicongenerator.net -->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ url('apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" href="{{ url('favicon-32x32.png') }}" sizes="32x32">
-        <link rel="icon" type="image/png" href="{{ url('favicon-16x16.png') }}" sizes="16x16">
+        <link rel="icon" type="image/png" href="{{ url('p7s.png') }}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{ url('p7s.png') }}" sizes="16x16">
         <link rel="manifest" href="{{ url('manifest.json') }}">
         <link rel="mask-icon" href="{{ url('safari-pinned-tab.svg') }}" color="#3bc65c">
         <link rel="shortcut icon" href="{{ url('favicon.ico') }}">
