@@ -37,7 +37,11 @@ class UpdateInvoiceAPIRequest extends InvoiceRequest
             'invoice_items' => 'valid_invoice_items',
             'invoice_number' => 'unique:invoices,invoice_number,' . $invoiceId . ',id,account_id,' . $this->user()->account_id,
             'discount' => 'positive',
-            //'invoice_date' => 'date',
+            'invoice_date' => 'date',
+            'discount' => 'positive',
+            'invoice_date' => 'date',
+            'due_date' => 'date',
+            'invoice_status_id' => 'integer'
             //'due_date' => 'date',
             //'start_date' => 'date',
             //'end_date' => 'date',
