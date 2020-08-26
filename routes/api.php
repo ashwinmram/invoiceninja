@@ -15,6 +15,7 @@ Route::resource('contacts', 'ContactApiController');
 Route::get('quotes', 'QuoteApiController@index');
 Route::get('download/{invoice_id}', 'InvoiceApiController@download');
 Route::resource('invoices', 'InvoiceApiController');
+Route::put('updateInvoice/{invoice_id}', 'InvoiceApiController@updateInvoice');
 Route::resource('payments', 'PaymentApiController');
 Route::resource('tasks', 'TaskApiController');
 Route::resource('credits', 'CreditApiController');
