@@ -482,9 +482,4 @@ class InvoiceApiController extends BaseAPIController
             abort(404);
         }
     }
-
-    public function updateInvoice(UpdateInvoiceAPIRequest $request, Invoice $invoice)
-    {
-        return $this->itemResponse($invoice);
-    }
 }
