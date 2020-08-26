@@ -483,10 +483,8 @@ class InvoiceApiController extends BaseAPIController
         }
     }
 
-    public function updateInvoice(UpdateInvoiceAPIRequest $request)
+    public function updateInvoice(UpdateInvoiceAPIRequest $request, Invoice $invoice)
     {
-        $invoice = $request->entity();
-
         return $this->itemResponse($invoice);
     }
 }
