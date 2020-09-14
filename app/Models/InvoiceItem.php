@@ -41,6 +41,13 @@ class InvoiceItem extends EntityModel
         'tax_rate2',
         'invoice_item_type_id',
         'discount',
+        'user_id',
+        'public_id',
+        'account_id',
+        'product_key',
+        'notes',
+        'cost',
+        'qty'
     ];
 
     /**

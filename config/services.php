@@ -64,4 +64,7 @@ return [
         'redirect' => env('LINKEDIN_OAUTH_REDIRECT'),
     ],
 
+    'ninja' => [
+        'token' => env('NINJA_API_TOKEN')
+    ]
 ];
