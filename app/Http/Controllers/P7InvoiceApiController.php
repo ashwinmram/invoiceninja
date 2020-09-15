@@ -48,7 +48,7 @@ class P7InvoiceApiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $invoice = Invoice::findOrFail($id);
+        $invoice = Invoice::where('public_id', $id)->first();
         $newItems = collect($request->invoice_items);
 
         $newItems->each(function ($item) use ($invoice) {
