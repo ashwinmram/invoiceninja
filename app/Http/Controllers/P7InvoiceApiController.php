@@ -61,7 +61,8 @@ class P7InvoiceApiController extends Controller
                 'product_key' => $item['product_key'],
                 'notes' => isset($item['notes']) ? $item['notes'] : "",
                 'cost' => $item['cost'],
-                'qty' => $item['qty']
+                'qty' => $item['qty'],
+                'tax_rate1' => 0.000
             ]);
 
             $invoice->amount += $item['cost'] * $item['qty'];
