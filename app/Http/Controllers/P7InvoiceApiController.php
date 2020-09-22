@@ -70,6 +70,11 @@ class P7InvoiceApiController extends Controller
 
             $invoice->amount += $item['cost'] * $item['qty'];
             $invoice->balance += $item['cost'] * $item['qty'];
+            $invoice->amount += $item['cost'] * $item['qty'] * $item['tax_rate1'] / 100;
+            $invoice->balance += $item['cost'] * $item['qty'] * $item['tax_rate1'] / 100;
+            $invoice->amount += $item['cost'] * $item['qty'] * $item['tax_rate2'] / 100;
+            $invoice->balance += $item['cost'] * $item['qty'] * $item['tax_rate2'] / 100;
+
             $invoice->save();
         });
 
