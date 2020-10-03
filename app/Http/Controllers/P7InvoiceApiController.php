@@ -68,12 +68,12 @@ class P7InvoiceApiController extends Controller
                 'tax_rate2' => $item['tax_rate2']
             ]);
 
-            $invoice->amount += $item['cost'] * $item['qty'];
-            $invoice->balance += $item['cost'] * $item['qty'];
-            $invoice->amount += $item['cost'] * $item['qty'] * $item['tax_rate1'] / 100;
-            $invoice->balance += $item['cost'] * $item['qty'] * $item['tax_rate1'] / 100;
-            $invoice->amount += $item['cost'] * $item['qty'] * $item['tax_rate2'] / 100;
-            $invoice->balance += $item['cost'] * $item['qty'] * $item['tax_rate2'] / 100;
+            $invoice->amount += round($item['cost'] * $item['qty'], 2);
+            $invoice->balance += round($item['cost'] * $item['qty'], 2);
+            $invoice->amount += round($item['cost'] * $item['qty'] * $item['tax_rate1'] / 100, 2);
+            $invoice->balance += round($item['cost'] * $item['qty'] * $item['tax_rate1'] / 100, 2);
+            $invoice->amount += round($item['cost'] * $item['qty'] * $item['tax_rate2'] / 100, 2);
+            $invoice->balance += round($item['cost'] * $item['qty'] * $item['tax_rate2'] / 100, 2);
 
             $invoice->save();
         });
